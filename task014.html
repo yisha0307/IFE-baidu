@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 014</title>
+  </head>
+<body>
+
+  <h3>污染城市列表</h3>
+  <ul id="aqi-list">
+<!--   
+    <li>第一名：福州（样例），10</li>
+  	<li>第二名：福州（样例），10</li> -->
+  </ul>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+var aqiData = [
+  ["北京", 90],
+  ["上海", 50],
+  ["福州", 10],
+  ["广州", 50],
+  ["成都", 90],
+  ["西安", 100]
+];
+
+$(document).ready(function(){
+  var i, rankarr=["第一名:","第二名:","第三名:","第四名:","第五名:","第六名:","第七名:"]
+  arr=aqiData.filter(function(val){return val[1]>=60}); //把大于60的找出来
+  function compare(arra,arrb){if(arra[1]>arrb[1])return -1;else return 1;}   //排个序
+  arr=arr.sort(compare); 
+ 
+  //以下代码：每个元素先后加上<li>，依次放在aqi-list里
+  for(i=0;i<arr.length;i++){
+    $("#aqi-list").append("<li>"+rankarr[i]+" "+arr[i]+"</li>");
+  }
+})
+
+</script>
+</body>
+</html>
