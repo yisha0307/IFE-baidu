@@ -3,7 +3,7 @@ $(document).ready(function(){
 		//如果不是英文或者中文，alert
 		function notcity(val){if(!cityexp.test(val)) {alert("请在'城市名称'一栏输入英文/中文"); temp=1;}}
 		//如果不是数字，alert
-		function notairquality(num){if(!airexp.test(num)) {alert("请在'空气质量指数'一栏输入英文/中文");temp=1;}}
+		function notairquality(num){if(!airexp.test(num)) {alert("请在'空气质量指数'一栏输入数字");temp=1;}}
 
 	$("#add-btn").click(function(){
 		var city = $("#aqi-city-input").val().trim(), airQuality = $("#aqi-value-input").val().trim();
