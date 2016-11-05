@@ -1,8 +1,6 @@
 $(document).ready(function(){
-var selectcity = $("#city-select option:selected").text();
+$("#city-select").change(function(){var selectcity = $("#city-select option:selected").text();
 var chartData = aqiSourceData[selectcity];
-console.log(chartData);
-console.log(typeof chartData["2016-01-01"]);
 renderChart();
 
 //渲染图标
@@ -15,8 +13,7 @@ target.addClass("dailyformat");
 target.css({"background-color":colors[Math.floor(Math.random() * colors.length)],
 "height":chartData[i]+"px","margin-top":(yheight-chartData[i])+"px"});
 }
-}
-
+}})
 
 
 })
