@@ -2,3 +2,13 @@
 
 .dailyformat{float:left;
 width:8px;margin-left:5px;}
+
+.weekformat{
+	float:left;
+width:20px;margin-left:10px;
+}
+
+.monthformat{
+	float:left;
+width:60px;margin-left:20px;
+}
