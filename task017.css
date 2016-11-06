@@ -1,14 +1,14 @@
 .aqi-chart-wrap{margin-left:30px;}
 
-.dailyformat{float:left;
+.dayformat{float:left;
 width:8px;margin-left:5px;}
 
 .weekformat{
 	float:left;
-width:20px;margin-left:10px;
+width:25px;margin-left:15px;
 }
 
 .monthformat{
 	float:left;
-width:60px;margin-left:20px;
+width:80px;margin-left:35px;
 }
