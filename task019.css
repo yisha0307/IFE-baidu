@@ -1,0 +1,13 @@
+#inputtxt{
+	width:150px;
+}
+#showplace{
+	width:800px;
+	height:300px;
+}
+.showdiv{
+	margin:10px 2px;
+	background-color:red;
+	width:12px;
+	float: left;
+}
