@@ -24,6 +24,7 @@ $(document).ready(function(){
 	$("#sort").click(function(){
 		var func = new Func();
 		func.compare();
+
 	})
 })
 
@@ -66,12 +67,16 @@ var Func = function(){
 },
 	compare: function(){
 	//冒泡排序
-	for(j=$(".showdiv").length-1;j>0;j--){
-	for(var i=0;i<j; i++){
+	var timer,i=0,len = $(".showdiv").length,j=len-1;
+	timer = setInterval(function(){if(j<1){clearInterval(timer);}
+		if(i==j){--j;i=-1;}
+		else{
 		var temp=$(".showdiv").eq(i),tempp=$(".showdiv").eq(i+1);
 		if(temp.attr("name")>tempp.attr("name")){
-			tempp.insertBefore(temp);}
-	}}
+			tempp.insertBefore(temp);
+		}}
+			++i;
+	},50);
 
 }
 	
