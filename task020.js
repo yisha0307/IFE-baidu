@@ -13,7 +13,7 @@ $(document).ready(function(){
 			//用replace直接换textStr中的temp
 				textStr = textStr.replace(new RegExp(temp,'g'), '<span class="matched">'+temp+'</span>');
 			}
-			$('#showplace').html('<div>'+ textStr+ '</div');
+			$('#showplace').html('<div>'+ textStr+ '</div>');//其实也可以不用写这个<div></div>
 	});
 
 })
