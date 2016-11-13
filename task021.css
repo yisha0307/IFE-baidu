@@ -1,0 +1,10 @@
+.moretags{
+	display: inline-block;
+	margin: 5px;
+	font-size: 25px;
+	color:steelBlue;
+	background-color: lightBlue;
+	cursor: pointer;
+}
+
+
