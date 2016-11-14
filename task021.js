@@ -9,8 +9,8 @@ $(document).ready(function(){
     $('body').on('mouseover', '.moretags', hovertags);
 	$('body').on('mouseout', '.moretags', recovertags);
 	$('body').on('click', '.moretags', deletetags);
-	$('body').on('click', '#btn', insertinterest);
-
+	$('body').on('click', '#btn', insertinterest); 
+	//原本我是写在tagshow里的，但是因为tagshow是和keydown绑在一起的，所以每按一次键盘就会让.moretags注册一次mouseover，所以会出现很多很多的“删除”
 })
 
 var tagShow = function(event){
