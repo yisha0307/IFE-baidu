@@ -1,0 +1,52 @@
+#one{margin:30px auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items:center;
+border:2px black solid;
+width:800px;
+height:300px;}
+
+.second{width:350px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items:center;
+height:250px;
+border: 2px solid green;}
+
+.third{width:130px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items:center;
+	margin:15px;
+height:200px;
+border:2px solid blue;}
+
+.fourth{
+	width:40px;
+	height:140px;
+	margin:5px;
+	border:2px solid red;
+}
+
+.buttons{
+	margin:0px auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items:center;
+}
+
+
+button{
+	width:100px;
+	border-style: none;
+	height:40px;
+	background-color: steelBlue;
+	color:white;
+	margin:0 20px;
+	cursor: pointer;
+	
+}
