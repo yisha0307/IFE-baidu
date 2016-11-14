@@ -21,3 +21,5 @@ task20:  https://yisha0307.github.io/IFE-baidu/task020.html
 
 task21:  https://yisha0307.github.io/IFE-baidu/task021.html
 
+task22:  https://yisha0307.github.io/IFE-baidu/task022.html
+
