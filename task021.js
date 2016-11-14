@@ -5,7 +5,12 @@
 $(document).ready(function(){
 	var tags = $('#tags').val(),
 	showtag = $('#showtag');
-    $(document).keydown(tagShow);
+    $('#tags').keydown(tagShow);
+    $('body').on('mouseover', '.moretags', hovertags);
+	$('body').on('mouseout', '.moretags', recovertags);
+	$('body').on('click', '.moretags', deletetags);
+	$('body').on('click', '#btn', insertinterest);
+
 })
 
 var tagShow = function(event){
@@ -27,25 +32,13 @@ var tagShow = function(event){
 					$('#showtag').append('<div class="moretags">'+tags+'</div>');
 					$('#tags').val("");
 				}}else{$('#tags').val("");}}
-
-	
-	$('.moretags').mouseover(function(event){
-	var tmp=$(this).text(); //为什么hover的时候会出现好多个‘删除’？
-	console.log(event.target.innerText);
-	$(this).text('删除'+tmp);
-	$(this).css({'color':'white','background-color':'red'});
-	});
-	$('.moretags').mouseout(recovertags);
-	$('.moretags').click(deletetags);
-	$('#btn').click(insertinterest);
 }
 
-// var hovertags = function(event){
-// 	var tmp=$(this).text(); //为什么hover的时候会出现好多个‘删除’？
-// 	console.log(event.target.innerText);
-// 	$(this).text('删除'+tmp);
-// 	$(this).css({'color':'white','background-color':'red'});
-// 	}
+var hovertags = function(event){
+	var tmp=$(this).text(); //为什么hover的时候会出现好多个‘删除’？
+	$(this).text('删除'+tmp);
+	$(this).css({'color':'white','background-color':'red'});
+	}
 var recovertags = function(event){
 	var tmp=$(this).text();
 	tmp =tmp.replace(/删除/,''); //这个是为了删除tmp的前两个字符
@@ -58,6 +51,18 @@ var deletetags = function(){
 }
 
 var insertinterest = function(event){
-	var txt = $('textarea').val().trim();
-	$('#showinterest').append("<div>"+txt+"</div>");
+	$('#showinterest').text("");
+	var txt = $('textarea').val().trim(),
+	txtarr = txt.split(/[^0-9a-zA-Z\u4e00-\u9fa5]+/),
+	filteredarr = txtarr.filter(function(val,i){
+		return txtarr.indexOf(val) === i; //filter callback函数用来去重
+	});
+
+	var l = filteredarr.length;
+	if(l>10){filteredarr.splice(0,l-10);}else{filteredarr = filteredarr;} //超过10个删除前面的我用的是splice
+	
+	for(var i=0;i<filteredarr.length;i++){
+		$('#showinterest').append('<div class="interest">'+filteredarr[i]+'</div>');
+	}
+	$('textarea').val("");
 }
