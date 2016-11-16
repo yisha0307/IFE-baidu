@@ -22,4 +22,7 @@ task20:  https://yisha0307.github.io/IFE-baidu/task020.html
 task21:  https://yisha0307.github.io/IFE-baidu/task021.html
 
 task22:  https://yisha0307.github.io/IFE-baidu/task022.html
+涉及的知识点：flexbox、二叉树遍历（preOrder/inOrder/postOrder)、setInterval
 
+task23:  https://yisha0307.github.io/IFE-baidu/task023.html
+涉及的知识点：flexbox、深度遍历（DFS)、广度遍历（BFS）、setTimeInterval
