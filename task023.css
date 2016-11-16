@@ -1,0 +1,63 @@
+div{
+	border:1px solid black;
+	margin:5px;
+	padding: 5px 2px;
+}
+
+.root{
+	margin:50px auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.first-child{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.first-child:nth-child(1){
+	flex-grow:1.2;
+	height:100px;
+}
+
+.first-child:nth-child(2){
+	flex-grow:1.5;
+}
+
+#fish{
+	height:100px;
+	width:80px;
+}
+
+.second-child, .forth-child{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.buttons{
+	border:none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+button{
+	margin:10px;
+	border-style: none;
+	background-color: steelBlue;
+	color:white;
+	width:80px;
+	height:30px;
+	cursor: pointer;
+}
+
+input{
+	width:150px;
+	height: 26px;
+}
