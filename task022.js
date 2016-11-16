@@ -1,16 +1,19 @@
 $(document).ready(function(){
-	var treeRoot = $('body > div')[0];
+	var treeRoot = $('body>div')[0];
 	$('#root').click(function(){
 		reset();
 		preOrder(treeRoot);
+		render(nodeArr);
 	});
 	$('#left').click(function(){
 		reset();
 		inOrder(treeRoot);
+		render(nodeArr);
 	});
 	$('#right').click(function(){
 		reset();
 		postOrder(treeRoot);
+		render(nodeArr);
 	});
 
 })
@@ -23,7 +26,7 @@ var preOrder = function(node){
 		preOrder(node.lastElementChild);
 	}
 	console.log(nodeArr);
-	render(nodeArr);
+	
 };
 
 var inOrder = function(node){
@@ -33,7 +36,6 @@ var inOrder = function(node){
 		inOrder(node.lastElementChild);
 	}
 	console.log(nodeArr);
-	render(nodeArr);
 };
 
 var postOrder = function(node){
@@ -43,7 +45,6 @@ var postOrder = function(node){
 		nodeArr.push(node);
 	}
 	console.log(nodeArr);
-	render(nodeArr);
 };
 
 var render = function(arr){
