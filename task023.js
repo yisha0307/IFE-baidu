@@ -64,6 +64,7 @@ var render = function(arr){
 
 var search = function(arr,temp){
 	var i=0,l=arr.length,value = arr[i].childNodes[0].nodeValue.trim();
+	//做一个处理，因为super、cat这些后面是有的回车和空格的，所以把这些replace成none就好了
 	var realV = value.replace('/\n | \r/','');
 	if(temp == realV){
 		arr[i].style.backgroundColor='red';
