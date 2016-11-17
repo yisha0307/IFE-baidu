@@ -11,10 +11,17 @@ $(document).ready(function(){
 		render(nodeArr);
 	})
 	$('#deepS').click(function(){
+		var txt = $('input').val();
+		console.log(txt);
 		reset();
+		dsf(root);
+		search(nodeArr,txt);
 	})
 	$('#wideS').click(function(){
-
+		var txt = $('input').val();
+		reset();
+		bsf(root);
+		search(nodeArr,txt);
 	})
 })
 
@@ -54,6 +61,30 @@ var render = function(arr){
 			window.clearInterval(timer);}
 	},500)
 }
+
+var search = function(arr,temp){
+	var i=0,l=arr.length,value = arr[i].childNodes[0].nodeValue.trim();
+	var realV = value.replace('/\n | \r/','');
+	if(temp == realV){
+		arr[i].style.backgroundColor='red';
+		return;
+	}else{
+		arr[i].style.backgroundColor='pink';
+	}
+	timer = setInterval(function(){
+		if(i<l-1){
+			i++;
+			arr[i-1].style.backgroundColor = 'white';
+			console.log(realV == temp);
+			if(temp == arr[i].childNodes[0].nodeValue.trim().replace('/\n | \r/','')){arr[i].style.backgroundColor='red';
+				window.clearInterval(timer);}else{
+				arr[i].style.backgroundColor='pink';}
+			}else{arr[l-1].style.backgroundColor='white';
+			window.clearInterval(timer);
+			}
+		},500)
+}
+
 
 var reset = function(){
 	nodeArr=[];
