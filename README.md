@@ -26,3 +26,5 @@ task22:  https://yisha0307.github.io/IFE-baidu/task022.html
 
 task23:  https://yisha0307.github.io/IFE-baidu/task023.html         
 - 涉及的知识点：flexbox、深度遍历（DFS)、广度遍历（BFS）、setTimeInterval
+
+task25:  https://yisha0307.github.io/IFE-baidu/task025.html 
