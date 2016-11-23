@@ -17,8 +17,14 @@ i{
     margin-left: 20px;
     margin-right:5px;
 }
+#result{
+	color:white;
+	text-align: center;
+}
 
-
+b{
+	color:red;
+}
 legend{
 	font-size:20px;
 }
@@ -37,7 +43,7 @@ div {
 .fa-times, .fa-plus{color:black;
 z-index:9;}
 
-.root{margin:50px 0 0 0;}
+.root{margin:20px 0 0 0;}
 
 .first-child{text-indent: 20px;}
 
