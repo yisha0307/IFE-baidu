@@ -29,6 +29,6 @@ var hideicon=function(){
 	}
 
 var dele = function(){
-	//window.confirm("确认要删除该项吗？");
+	window.confirm("确认要删除该项吗？");
 	console.log("1");
 }
