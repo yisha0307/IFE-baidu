@@ -5,6 +5,11 @@ $(document).ready(function(){
 	$('body').on('mouseout','span',hideicon);	
 	$('body').on('click','.fa-times',dele)
 	$('#search').click(search); //按search进行搜索
+	$('input').keyup(function(e){
+		if(e.keyCode === 13){
+			search();
+		}
+	});//加一个键盘事件
 	$('#clear').click(clear); //按clear进行清除
 })
 	
