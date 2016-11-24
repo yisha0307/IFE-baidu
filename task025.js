@@ -1,8 +1,8 @@
 $(document).ready(function(){
 	$('#special').on('click',openfolder);
 	$('.fa-folder').on('click',openfolder); //用来open folder和close folder
-	$('body').on('mouseover','span',showicon);
-	$('body').on('mouseout','span',hideicon);	
+	$('body').on('mouseenter','span',showicon);
+	$('body').on('mouseleave','span',hideicon);	
 	$('body').on('click','.fa-times',dele)
 	$('#search').click(search); //按search进行搜索
 	$('input').keyup(function(e){
