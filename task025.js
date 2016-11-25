@@ -4,12 +4,13 @@ $(document).ready(function(){
 	$('body').on('mouseenter','span',showicon);
 	$('body').on('mouseleave','span',hideicon);	
 	$('body').on('click','.fa-times',dele)
+	$('body').on('click','.fa-plus',plus)	//这个地方还要再改一下
 	$('#search').click(search); //按search进行搜索
 	$('input').keyup(function(e){
 		if(e.keyCode === 13){
 			search();
 		}
-	});//加一个键盘事件
+	});
 	$('#clear').click(clear); //按clear进行清除
 })
 	
@@ -18,13 +19,13 @@ var flag = true;
 var openfolder = function(){
 	if(flag){
 		$(this).parent().children().show();
-			flag =false;
-			$(this).addClass("fa-folder-open").removeClass('fa-folder');
-			}else{
-					$(this).parent().children('div').hide();
-					flag = true;
-					$(this).addClass("fa-folder").removeClass('fa-folder-open');
-				}
+		flag =false;
+		$(this).addClass("fa-folder-open").removeClass('fa-folder');
+	}else{
+		$(this).parent().children('div').hide();
+		flag = true;
+		$(this).addClass("fa-folder").removeClass('fa-folder-open');
+	}
 }
 
 var showicon = function(){
@@ -37,8 +38,14 @@ var hideicon=function(){
 	}
 
 var dele = function(){
-	window.confirm("确认要删除该项吗？");
-	console.log("1");
+	var temp = window.confirm("确认要删除该项吗？");
+	if(temp){$(this).parent().parent().remove();}	
+}
+
+var plus = function(){
+	var txt = window.prompt('请输入名称：',"");
+	var attr= $(this).parent().parent().children('div').eq(0).attr('class');
+	$(this).parent().parent().append('<div class='+attr+'><span>'+txt+'</span></div>');
 }
 
 var search = function(){
