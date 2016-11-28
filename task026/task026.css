@@ -5,11 +5,18 @@
 	border:2px solid gray;
 }
 
-#space{
+#background{
+	position: absolute;
 	background-color:#DBE9F4;
 	margin:20px 10px 0px 10px ;
 }
-
+#screen {
+    position: relative;
+    top: 20px;
+    left: 10px;
+    z-index: 1;
+    background-color:transparent;
+}
 .console{
 	float:left;
 	width:250px;
