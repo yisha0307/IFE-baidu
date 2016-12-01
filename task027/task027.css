@@ -1,0 +1,86 @@
+.container{
+	position: absolute;
+	left:50%;
+	transform: translateX(-50%);
+	margin:10px 0;
+	width:900px;
+	height:auto;
+	border:2px solid gray;
+}
+
+#background{
+	position: absolute;
+	background-color:#DBE9F4;
+	margin:20px 10px 0px 10px ;
+}
+#screen {
+    position: relative;
+    top: 20px;
+    left: 10px;
+    z-index: 1;
+    background-color:transparent;
+}
+.console{
+	float:left;
+	width:250px;
+	height:800px;
+	text-align: center;
+}
+
+fieldset{
+	margin:20px 10px 10px 20px;
+	border-style:none;
+	background-color: #FAEBD7;
+}
+
+.wrapper{
+	list-style: none;
+}
+
+span{
+	margin-right:10px;
+	margin-left:-20px;
+}
+button{
+	width:90px;
+	height:30px;
+	margin:5px;
+	border-style:none;
+	background-color: #7CB9E8;
+	border-radius:5px;
+	cursor: pointer;
+}
+#console li{
+	list-style: none;
+	text-align: left;
+}
+
+li:nth-child(1){
+	margin-top:-10px;
+}
+
+li:last-child{
+	margin-bottom: -10px;
+}
+
+div.selects{
+	display: none;
+	position: absolute;
+	border:2px solid gray;
+	width:350px;
+	height:auto;
+	background-color: white;
+	left:50%;
+	transform: translateX(-50%);
+	margin:200px 0;
+	padding:0 30px;
+}
+
+.selects button{
+	text-align: center;
+	margin: 15px 5px;
+	transform: translateX(80%);
+}
+
+
+h4{text-align: center;}
