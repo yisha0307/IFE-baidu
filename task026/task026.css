@@ -47,6 +47,10 @@ button{
 	border-radius:5px;
 	cursor: pointer;
 }
+#console li{
+	list-style: none;
+	text-align: left;
+}
 
 li:nth-child(1){
 	margin-top:-10px;
