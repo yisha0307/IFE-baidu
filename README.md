@@ -30,3 +30,5 @@ task23:  https://yisha0307.github.io/IFE-baidu/task023.html
 task25:  https://yisha0307.github.io/IFE-baidu/task025.html 
 
 task26:  https://yisha0307.github.io/IFE-baidu/task026/task026.html 
+
+task27:  https://yisha0307.github.io/IFE-baidu/task027/task027.html 
