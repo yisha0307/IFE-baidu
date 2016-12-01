@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IFE-task027</title>
+	<link rel="stylesheet" href="task027.css">
+</head>
+<body>
+	<div class="container">
+		<!-- console.log侧边栏 -->
+		<div class="console" id="console">
+			<h2>Console Log</h2>
+			<ul>
+			</ul>
+		</div> 
+		<!-- 小宇宙区域 -->
+		<canvas id='background' width='620' height='600'>
+		<!-- canvas的width和height不能在css里定义 -->
+			<img src="planet.png" />
+			
+		</canvas>
+		<canvas id="screen" width='620' height='600'><img src="red-rocket.png" /></canvas>
+		<!-- commander panel区域 -->
+		<fieldset>
+			<legend><h3>Commnder Panel</h3></legend>
+			<ul>
+				<li class="wrapper">
+					<span class="name">spaceship No.1</span>
+					<button class='btn' name="launch" id="launch1">Launch</button>
+					<button class='btn' name="fly">Fly</button>
+					<button class='btn' name='stop'>Stop</button>
+					<button class='btn' name='destroy'>Destroy</button>
+				</li>
+				<li class="wrapper">
+					<span class="name">spaceship No.2</span>
+					<button class='btn' name="launch">Launch</button>
+					<button class='btn' name="fly">Fly</button>
+					<button class='btn' name='stop'>Stop</button>
+					<button class='btn' name='destroy'>Destroy</button>
+				</li>
+				<li class="wrapper">
+					<span class="name">spaceship No.3</span>
+					<button class='btn' name="launch">Launch</button>
+					<button class='btn' name="fly">Fly</button>
+					<button class='btn' name='stop'>Stop</button>
+					<button class='btn' name='destroy'>Destroy</button>
+				</li>
+				<li class="wrapper">
+					<span class="name">spaceship No.4</span>
+					<button class='btn' name="launch">Launch</button>
+					<button class='btn' name="fly">Fly</button>
+					<button class='btn' name='stop'>Stop</button>
+					<button class='btn' name='destroy'>Destroy</button>
+				</li>
+			</ul>
+		</fieldset>
+	</div>
+
+	<!-- 浮出层 -->
+	<div class="selects">
+		<h4>新建飞船</h4>
+		<label for='dynamic'>动力系统：<br/><br/>
+		<input type="radio" name='dynamic' checked="checked">奇点（相对速度：1，能耗：5）<br/>
+		<input type='radio' name='dynamic'>碎星（相对速度：2，能耗：7)<br/>
+		<input type='radio' name='dynamic'>闪烁（相对速度：3，能耗：9）<br/>
+		<br/>
+		</label>
+		<label for ='recover'>能源系统: <br/><br/>
+		<input type="radio" name="recover" checked="checked">古筝（动力恢复速度：2）<br/>
+		<input type='radio' name='recover'>夏（动力恢复速度：3）<br/>
+		<input type='radio' name='recover'>水滴（动力恢复速度：4）<br/>
+		</label>
+		<button id='sure'>确定</button>
+		<button id='cancel'>取消</button>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="task027.js"></script>
+</body>
+</html>
