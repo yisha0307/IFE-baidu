@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IFE-task29</title>
+	<style>
+	div{
+		transform: translateX(40%);
+	}
+	label{
+		margin-right:5px;
+	}
+	#text{
+		height:20px;
+		border-radius:4px;
+		border:1px solid gray;
+	}
+	.btn{
+		width:50px;
+		height:25px;
+		font-size:15px;
+		border-style:none;
+		color:white;
+		background-color: steelBlue;
+		border-radius:4px;
+		margin-left:4px;
+		cursor: pointer;
+	}
+	p{
+		color:gray;
+		font-size:14px;
+
+	}
+	</style>
+</head>
+<body>
+
+	<div class="threeinput">	
+		<label>名称</label>
+		<input type='text' id='text' size= '25'/>
+		<input class="btn" type ='submit' value='验证'/>
+		<p id='result'>必填，长度为4~16个字符</p>
+		
+	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+	(function(){
+		var Methods = {
+			lengthIs : function(val){
+				let num = 0;
+				for(let i=0;i<val.length;i++){
+					let codenum = val.charCodeAt(i); //靠charcodeat来找是不是中文还是别的啥
+					if(codenum>=0 && codenum <=128){
+						num +=1;
+					}else {num+=2;}
+				}
+				console.log(num);
+				return num;
+			},
+			validation : function(){
+				var textvalue = document.getElementById('text').value;
+				var len = Methods.lengthIs(textvalue);
+				if(textvalue ===''){
+					$('p').text('姓名不能为空').css('color','red');
+					$('#text').css('border','1px solid red');
+				}else if(len >=4 && len <=16){
+					$('p').text('姓名格式正确').css('color','green');
+					$('#text').css('border','1px solid green');
+				}else{
+					$('p').text('请输入长度为4~16的字符').css('color','red');
+					$('#text').css('border','1px solid red');
+				}
+			}
+		}
+		
+
+		var validation = function(){
+			var textvalue = document.getElementById('text').value;
+			var len = lengthIs(textvalue);
+			if(textvalue ===''){
+				$('p').text('姓名不能为空').css('color','red');
+				$('#text').css('border','1px solid red');
+			}else if(len >=4 && len <=16){
+				$('p').text('姓名格式正确').css('color','green');
+				$('#text').css('border','1px solid green');
+			}else{
+				$('p').text('请输入长度为4~16的字符').css('color','red');
+				$('#text').css('border','1px solid red');
+			}
+		}
+
+	$(document).ready(function(){
+		$('.btn').on('click',Methods.validation);
+		$('#text').on('keyup',function(e){ //加了一个键盘事件
+			if(e.keyCode ===13){
+				Methods.validation();
+			}
+		})
+	})
+	}())
+	
+	
+</script>
+</body>
+</html>
