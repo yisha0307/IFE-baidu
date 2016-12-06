@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IFE-task030</title>
+	<link rel="stylesheet" href="task030.css">
+</head>
+<body>
+<div class ='container'>
+	<form>
+		<table>
+			<tr>
+				<td><label>名称</label></td>
+				<td><input type='text' id='t1'/></td>			
+			</tr>
+			<tr>
+				<td></td>
+				<td class='hint' id='hint1'>必填，长度为4~16个字符</td>
+			</tr>
+			<tr>
+				<td><label>密码</label></td>
+				<td><input type='password' id='t2'/></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td class='hint' id='hint2'>
+					必填，长度为4~16位字符,包含字母和数字
+				</td>
+			</tr>
+			<tr>
+				<td><label>密码确认</label></td>
+				<td><input type='password' id='t3' /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td class='hint' id='hint3'>必填，必须与密码一致</td>
+			</tr>
+			<tr>
+				<td><label>邮箱</label></td>
+				<td><input type='text' id='t4'/></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td class='hint' id='hint4'>
+					选填，请填写正确的邮箱格式
+				</td>
+			</tr>
+			<tr>
+				<td><label>手机</label></td>
+				<td><input type='text' id='t5'/></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td class='hint' id='hint5'>
+					选填，请填写正确的手机格式
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<button type='submit' class='btn'>提交</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="task030.js"></script>	
+</body>
+</html>
