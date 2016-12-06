@@ -107,10 +107,14 @@
 			var hints= $('.hint');
 			hints.eq(ind/2).hide();
 			validation.nameV();
-			validation.passwordV();
-			validation.confirmV();
-			validation.emailV();
-			validation.phoneV();
+			if(ind >=2){
+			validation.passwordV();}
+			if(ind >=4){
+			validation.confirmV();}
+			if(ind >=6){
+			validation.emailV();}
+			if(ind >=8){
+			validation.phoneV();}
 		});
 		$('.btn').on('click',function(e){
 			e.preventDefault();
