@@ -1,0 +1,50 @@
+*{
+	padding: 0;
+	margin:0;
+}
+
+.container{
+	width:900px;
+	margin:20px auto;
+}
+label{
+	float:right;
+}
+table{
+	margin:20px 0;
+}
+table td{
+	padding:5px;
+}
+.hint{
+	color:gray;
+	font-size:12px;
+	display: none;
+}
+
+input{
+	width:200px;
+	height:25px;
+	border: 1px solid #B2BEB5;
+	border-radius: 4px;
+}
+
+button{
+	border-style: none;
+	width:55px;
+	height:25px;
+	background-color: steelBlue;
+	color:white;
+	font-size:15px;
+	border-radius: 2px;
+	cursor: pointer;
+	float:right;
+}
+
+.wrong{
+	border:1px solid red;
+}
+
+.right{
+	border:1px solid green;
+}
