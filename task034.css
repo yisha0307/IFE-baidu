@@ -1,0 +1,31 @@
+canvas#background{
+	position:relative;
+}
+div#sqaure{
+	width:45px;
+	height: 45px;
+	position: absolute;
+	top:228px;
+	left:228px;
+}
+div#part1{
+	background-color: #FE6F5E;
+	width:45px;
+	height:15px;
+	position:relative;
+	top:0px;
+	left:0px;
+}
+
+div#part2{
+	background-color: #2E5894;
+	width:45px;
+	height: 30px;
+	position: relative;
+	top:0px;
+	left:0px;
+}
+
+input{
+	margin-left:40px;
+}
