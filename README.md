@@ -40,4 +40,7 @@ task29:  https://yisha0307.github.io/IFE-baidu/task029.html
 task30:  https://yisha0307.github.io/IFE-baidu/task030/task030.html     
 - 涉及知识点：表单验证（包括密码、邮箱、手机号）
 
-task33:  https://yisha0307.github.io/IFE-baidu/task033.html
+task33:  https://yisha0307.github.io/IFE-baidu/task033.html   
+
+task34:  https://yisha0307.github.io/IFE-baidu/task034.html
+- 涉及知识点：setInterval的动画
