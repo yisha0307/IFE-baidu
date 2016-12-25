@@ -43,4 +43,7 @@ task30:  https://yisha0307.github.io/IFE-baidu/task030/task030.html
 task33:  https://yisha0307.github.io/IFE-baidu/task033.html   
 
 task34:  https://yisha0307.github.io/IFE-baidu/task034.html
-- 涉及知识点：setInterval的动画
+- 涉及知识点：setInterval的动画        
+
+task37:https://yisha0307.github.io/IFE-baidu/task037/task037.html    
+- React 浮出层
