@@ -1,0 +1,126 @@
+/* line 12, ../sass/task037.scss */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* line 16, ../sass/task037.scss */
+.page {
+  height: 120vh;
+}
+
+/* line 19, ../sass/task037.scss */
+#mask {
+  position: fixed;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI0MCUiIHN0b3AtY29sb3I9IiNkZGRkZGQiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiNWQ2ZTQiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background: -moz-linear-gradient(0deg, #dddddd 40%, #b5d6e4);
+  background: -webkit-linear-gradient(0deg, #dddddd 40%, #b5d6e4);
+  background: linear-gradient(90deg, #dddddd 40%, #b5d6e4);
+  width: 100vw;
+  height: 120vh;
+  z-index: 0;
+}
+
+/* line 27, ../sass/task037.scss */
+header {
+  width: 100vw;
+  position: fixed;
+  height: 50px;
+  background-color: #007d60;
+  z-index: 2;
+}
+/* line 33, ../sass/task037.scss */
+header h2 {
+  color: white;
+  line-height: 50px;
+  margin-left: 12%;
+  font-weight: 400;
+}
+
+/* line 42, ../sass/task037.scss */
+p.rules {
+  position: relative;
+  white-space: pre;
+  top: 13vh;
+  line-height: 28px;
+  margin-left: 12%;
+}
+
+/* line 50, ../sass/task037.scss */
+.show {
+  display: block;
+}
+
+/* line 53, ../sass/task037.scss */
+.hide {
+  display: none;
+}
+
+/* line 56, ../sass/task037.scss */
+.logpad {
+  background: white;
+  z-index: 9;
+  width: 320px;
+  height: 220px;
+  border-radius: 10px;
+  border: 2px solid #999999;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+}
+/* line 66, ../sass/task037.scss */
+.logpad .title {
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+/* line 74, ../sass/task037.scss */
+.logpad .title .delete {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #f1b867;
+  color: #f1b867;
+  border-radius: 5px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+/* line 83, ../sass/task037.scss */
+.logpad .title .delete:hover {
+  color: white;
+  background-color: #f1b867;
+}
+/* line 89, ../sass/task037.scss */
+.logpad .inputs {
+  margin: 10px auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+/* line 95, ../sass/task037.scss */
+.logpad .inputs input {
+  margin: 5px 0 3px 0;
+  height: 25px;
+  border: 1px solid #d6d6d6;
+  border-radius: 3px;
+}
+/* line 100, ../sass/task037.scss */
+.logpad .inputs input:focus {
+  border-color: #75bffe;
+  outline: 0;
+}
+/* line 105, ../sass/task037.scss */
+.logpad .inputs .submit {
+  margin-top: 20px;
+  background-color: #0275d8;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  height: 30px;
+  cursor: pointer;
+}
