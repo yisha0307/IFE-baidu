@@ -37,16 +37,20 @@ class LogPad extends React.Component{
 	constructor(props){
 		super(props);
 		this.state={
-			top:'15vh',
-			left:'35vw'
-		}
+			top:300,
+			left:350
+		};	
+		this.onChildChanged1 = this.onChildChanged1.bind(this);	
+	}
+	onChildChanged1(newtop,newleft){
+		this.setState({top:newtop,left:newleft});
 	}
 	render(){
 		const top= this.state.top;
 		const left = this.state.left;
 		return (
-			<div className = 'logpad' style={{'margin-top': top, 'margin-left':left}}>
-				<Title display = {this.props.display} callbackParent = {this.props.callbackParent}/>
+			<div className = 'logpad' style={{'top': top+'px', 'left':left+'px'}} >
+				<Title display = {this.props.display} top={this.state.top} left={this.state.left} callbackParent = {this.props.callbackParent}  callbackParent1 = {this.onChildChanged1}/>
 				<UserInputs />
 			</div>);
 	}
@@ -54,17 +58,61 @@ class LogPad extends React.Component{
 class Title extends React.Component{
 	constructor(props){
 		super(props);
-		this.state={display: this.props.display};
+		this.state={
+			display: this.props.display,
+			cursor:'pointer',
+			clientx: null,
+			clienty: null,
+			isDragging: false//设置下是不是在drag状态
+		};
 		this.handleClick = this.handleClick.bind(this);
+		//进入title的时候把鼠标指针换一下
+		this.handleMouseEnter = this.handleMouseEnter.bind(this);
+		this.handleMouseLeave = this.handleMouseLeave.bind(this);
+		//拖拽
+		this.handleMouseDown = this.handleMouseDown.bind(this);
+		this.handleMouseMove = this.handleMouseMove.bind(this);
+		this.handleMouseUp = this.handleMouseUp.bind(this);
+	}
+	handleMouseEnter(e){
+		this.setState({cursor:'move'});
+	}
+	handleMouseLeave(e){
+		this.setState({cursor:'pointer',isDragging:false});
 	}
 	handleClick(){
 		var newS = false;
 		this.setState({display: newS});
 		this.props.callbackParent(newS);
 	}
+	handleMouseDown(e){
+		this.setState({
+			clientx:e.pageX,
+			clienty:e.pageY,
+			isDragging:true});
+	}
+	handleMouseMove(e){
+		if(this.state.isDragging === true){
+		const moveX = e.pageX - this.state.clientx +this.props.top;
+		const moveY = e.pageY - this.state.clienty+this.props.left;
+		this.props.callbackParent1(moveX,moveY);
+	}else{
+			return false;
+		}
+	}
+	handleMouseUp(e){
+		e.preventDefault();
+		this.setState({
+			isDragging:false,
+			clientx:null,
+			clienty:null
+		});
+		
+	}
 	render(){
+		const cursor = this.state.cursor;
 		return(
-			<div className = 'title'>
+			<div className = 'title' style={{'cursor':cursor}} onMouseEnter ={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} onMouseDown={this.handleMouseDown} onMouseMove = {this.handleMouseMove} onMouseUp={this.handleMouseUp}>
 			 <h4>登录</h4>
 			 <div className='delete' onClick = {this.handleClick}>X</div>
 			 </div>);
