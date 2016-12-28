@@ -37,12 +37,12 @@ class LogPad extends React.Component{
 	constructor(props){
 		super(props);
 		this.state={
-			top:300,
-			left:350
+			top:(window.innerHeight - 220) /2,
+			left:(window.innerWidth - 320) /2
 		};	
 		this.onChildChanged1 = this.onChildChanged1.bind(this);	
 	}
-	onChildChanged1(newtop,newleft){
+	onChildChanged1(newleft,newtop){
 		this.setState({top:newtop,left:newleft});
 	}
 	render(){
@@ -87,19 +87,24 @@ class Title extends React.Component{
 	}
 	handleMouseDown(e){
 		this.setState({
-			clientx:e.pageX,
-			clienty:e.pageY,
+			relativex:e.pageX - this.props.left,
+			relativey:e.pageY - this.props.top,
 			isDragging:true});
 	}
 	handleMouseMove(e){
 		if(this.state.isDragging === true){
-		const moveX = e.pageX - this.state.clientx +this.props.top;
-		const moveY = e.pageY - this.state.clienty+this.props.left;
-		this.props.callbackParent1(moveX,moveY);
-	}else{
-			return false;
+			const maxX = window.innerWidth - 320;
+			const maxY = window.innerHeight - 220;
+			var moveX= e.pageX - this.state.relativex;
+			var moveY = e.pageY - this.state.relativey;
+			//用来限制，不让登录框超过边界
+			moveX = Math.min(Math.max(0,moveX),maxX);
+			moveY = Math.min(Math.max(0,moveY),maxY);
+			this.props.callbackParent1(moveX,moveY);
+		}else{
+				return false;
+			}
 		}
-	}
 	handleMouseUp(e){
 		e.preventDefault();
 		this.setState({

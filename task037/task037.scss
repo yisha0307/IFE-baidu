@@ -55,6 +55,8 @@ p.rules{
 }
 .logpad{
 	background: white;
+	resize:both;
+	overflow: auto;
 	z-index:9;
 	width:320px;
 	height:220px;

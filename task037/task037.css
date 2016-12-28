@@ -59,6 +59,8 @@ p.rules {
 /* line 56, ../sass/task037.scss */
 .logpad {
   background: white;
+  resize: both;
+  overflow: auto;
   z-index: 9;
   width: 320px;
   height: 220px;
@@ -68,7 +70,7 @@ p.rules {
   display: flex;
   flex-direction: column;
 }
-/* line 66, ../sass/task037.scss */
+/* line 68, ../sass/task037.scss */
 .logpad .title {
   margin-top: 15px;
   margin-left: 20px;
@@ -78,7 +80,7 @@ p.rules {
   justify-content: space-between;
   align-items: baseline;
 }
-/* line 74, ../sass/task037.scss */
+/* line 76, ../sass/task037.scss */
 .logpad .title .delete {
   width: 30px;
   height: 30px;
@@ -89,12 +91,12 @@ p.rules {
   text-align: center;
   cursor: pointer;
 }
-/* line 83, ../sass/task037.scss */
+/* line 85, ../sass/task037.scss */
 .logpad .title .delete:hover {
   color: white;
   background-color: #f1b867;
 }
-/* line 89, ../sass/task037.scss */
+/* line 91, ../sass/task037.scss */
 .logpad .inputs {
   margin: 10px auto;
   width: 70%;
@@ -102,19 +104,19 @@ p.rules {
   flex-direction: column;
   align-content: space-around;
 }
-/* line 95, ../sass/task037.scss */
+/* line 97, ../sass/task037.scss */
 .logpad .inputs input {
   margin: 5px 0 3px 0;
   height: 25px;
   border: 1px solid #d6d6d6;
   border-radius: 3px;
 }
-/* line 100, ../sass/task037.scss */
+/* line 102, ../sass/task037.scss */
 .logpad .inputs input:focus {
   border-color: #75bffe;
   outline: 0;
 }
-/* line 105, ../sass/task037.scss */
+/* line 107, ../sass/task037.scss */
 .logpad .inputs .submit {
   margin-top: 20px;
   background-color: #0275d8;
