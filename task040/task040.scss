@@ -1,0 +1,113 @@
+@import "compass";
+@import "compass/css3";
+
+$bgcolor:#1e2f27;
+$heading:#7ea996;
+$days:#fad8c0;
+$current:#fe4365;
+
+
+*{
+	box-sizing:border-box;
+	padding:0;
+	margin:0;
+}
+html,body{
+	min-height: 100%;
+	background-color: $bgcolor;
+}
+
+.calendar{
+	background-color: $days;
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-top:-225px;
+	margin-left:-195px;
+	width:360px;
+	padding:15px;
+	box-shadow: 1px 1px 20px 0  rgba(0, 0, 0, 0.4);
+	border-radius:5px;
+	overflow: hidden;
+
+	&--nav{
+		margin:-15px -15px 15px;
+		padding:0 15px;
+		background-color: $heading;
+		color:#fff;
+		height: 70px;
+		position: relative;
+
+		a{
+			position: absolute;
+			cursor: pointer;
+			left:10px;
+			font-size:32px;
+			line-height: 1;
+			top:16px;
+			width:30px;
+			text-align: center;
+			display: inline-block;
+      		color: transparentize(#fff, 0.6);
+     		user-select: none;
+
+     		&:hover{
+     			color:#fff;
+     		}
+     		&:last-child{
+     			left:auto;
+     			right:10px;
+     		}
+		}
+		h1{
+			margin:0;
+			position: absolute;
+			left:40px;
+			right:40px;
+			text-align: center;
+			cursor: pointer;
+			font-weight: 400;
+			font-size: 30px;
+			line-height: 66px;
+			user-select:none;
+		}
+		small{
+			font-weight: 300;
+			font-size: 60%;
+			margin-left:5px;
+		}
+	}
+	&--days{
+		span{
+			width:14.28571%;
+			display: inline-block;
+			text-align: center;
+			user-select:none;
+			cursor: pointer;
+			margin:8px 0;
+			line-height:34px;
+			position: relative;
+			font-size:16px;
+			&.current{
+				border-radius: 20px;
+				font-weight: 700;
+				background-color: $current;
+				color: #fff;
+			}
+			&.muted{
+				color:rgba(0, 0, 0, 0.3);
+			}
+			&.selected{
+				@extend .current;
+				background-color: $heading;
+			}
+
+		}
+	.labels{
+		color:#fff;
+		background-color: $current;
+		margin:-15px -16px 5px -16px;
+		cursor: initial;
+	}
+	}
+}
