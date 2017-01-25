@@ -52,4 +52,7 @@ task38:https://yisha0307.github.io/IFE-baidu/task038/task038.html
 - React table sort    
 
 task40:https://yisha0307.github.io/IFE-baidu/task040/task040.html 
-- React 日历
+- React 日历   
+
+task42:https://yisha0307.github.io/IFE-baidu/task042/task042.html 
+- React 日历 (可选择startDay和endDay)
