@@ -1,0 +1,53 @@
+/* line 4, ../sass/task042.scss */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 10, ../sass/task042.scss */
+#app1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  height: auto;
+}
+
+/* line 19, ../sass/task042.scss */
+span {
+  display: inline-block;
+  width: 50px;
+}
+
+/* line 24, ../sass/task042.scss */
+.flagBtn {
+  width: 200px;
+  height: 20px;
+}
+
+/* line 29, ../sass/task042.scss */
+.calender-hide {
+  display: none;
+}
+
+/* line 33, ../sass/task042.scss */
+.active {
+  background-color: red;
+}
+
+/* line 37, ../sass/task042.scss */
+.between {
+  background-color: pink;
+}
+
+/* line 41, ../sass/task042.scss */
+.start, .end {
+  background-color: #F19CBB;
+}
+
+/* line 45, ../sass/task042.scss */
+.muted {
+  color: grey;
+}
