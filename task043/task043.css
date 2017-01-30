@@ -1,0 +1,131 @@
+*{
+  margin:0;
+  padding: 0;
+}
+
+.album{
+  position: relative;
+  margin:20px;
+}
+
+.album img{
+  position: absolute;
+  object-fit: cover;
+  transition: all 200ms;
+}
+/*only one child*/
+.album > img:first-child:nth-last-child(1){
+  width: 100%;
+  height: 100%;
+}
+/*two children*/
+.album > img:first-child:nth-last-child(2){
+  width:66.666667%;
+  height: 100%;
+  -webkit-clip-path:polygon(0% 0%, 100% 0%, 50% 100%,0% 100%);
+}
+.album > img:first-child:nth-last-child(2)~img:nth-of-type(2){
+  width: 66.666667%;
+  height: 100%;
+  left:33.33333%;
+  -webkit-clip-path:polygon(50% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+/*three children*/
+.album > img:first-child:nth-last-child(3){
+  width:50%;
+  height: 100%;
+}
+.album >img:first-child:nth-last-child(3) ~ img:nth-of-type(2){
+  width: 50%;
+  height: 50%;
+  left:50%;
+}
+.album >img:first-child:nth-last-child(3) ~ img:nth-of-type(3){
+  width: 50%;
+  height: 50%;
+  left:50%;
+  top:50%;
+}
+
+/*four children*/
+.album > img:first-child:nth-last-child(4){
+  width:50%;
+  height: 50%;
+}
+.album > img:first-child:nth-last-child(4)~img:nth-of-type(2){
+  width: 50%;
+  height: 50%;
+  left:50%;
+}
+.album > img:first-child:nth-last-child(4)~img:nth-of-type(3){
+  width: 50%;
+  height: 50%;
+  top:50%;
+  left:50%;
+}
+.album > img:first-child:nth-last-child(4) ~ img:nth-of-type(4){
+  width: 50%;
+  height: 50%;
+  top:50%;
+}
+
+/*five children*/
+.album > img:first-child:nth-last-child(5){
+  width: 66.6666667%;
+  height: 66.6666667%;
+}
+.album > img:first-child:nth-last-child(5)~img:nth-of-type(2){
+  width:33.33333%;
+  height: 50%;
+  left:66.666667%;
+}
+.album > img:first-child:nth-last-child(5) ~ img:nth-of-type(3) {
+    width: 33.333%;
+    height: 33.333%;
+    top: 66.667%;
+}
+.album > img:first-child:nth-last-child(5) ~ img:nth-of-type(4) {
+    width: 33.333%;
+    height: 33.333%;
+    left: 33.333%;
+    top: 66.667%;
+}
+.album > img:first-child:nth-last-child(5) ~ img:nth-of-type(5) {
+    width: 33.333%;
+    height: 50%;
+    left: 66.667%;
+    top: 50%;
+}
+/* six children */
+.album > img:first-child:nth-last-child(6) {
+    width: 66.667%;
+    height: 66.667%;
+}
+.album > img:first-child:nth-last-child(6) ~ img:nth-of-type(2) {
+    width: 33.333%;
+    height: 33.333%;
+    left: 66.667%;
+}
+.album > img:first-child:nth-last-child(6) ~ img:nth-of-type(3) {
+    width: 33.333%;
+    height: 33.333%;
+    top: 33.333%;
+    left: 66.667%;
+}
+.album > img:first-child:nth-last-child(6) ~ img:nth-of-type(4) {
+    width: 33.333%;
+    height: 33.333%;
+    top: 66.667%;
+}
+.album > img:first-child:nth-last-child(6) ~ img:nth-of-type(5) {
+    width: 33.333%;
+    height: 33.333%;
+    left: 33.333%;
+    top: 66.667%;
+}
+.album > img:first-child:nth-last-child(6) ~ img:nth-of-type(6) {
+    width: 33.333%;
+    height: 33.333%;
+    left: 66.667%;
+    top: 66.667%;
+}
