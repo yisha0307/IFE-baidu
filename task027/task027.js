@@ -1,5 +1,5 @@
 (function(){
-	var spaceships = [null,null,null,null];
+	var spaceships = [];
 
 	//定义一些常量
 	var SCREEN_WIDTH = 620;
@@ -128,25 +128,25 @@
 				if(success){
 					switch(cmd){
 						case 'launch':
-						if(spaceships[id]===null){ 	//indexof = -1 证明没有这个element
+						if(spaceships[id]===undefined){ 	//indexof = -1 证明没有这个element
 							var spaceship = new Spaceship(id);
-							spaceships.splice(id,1,spaceship);
+							spaceships[id] = spaceship;
 							Log.show('Spaceship No.'+id+' launched.');
 						}
 						break;
 						case 'fly':
-						if(spaceships[id]!==null){
+						if(spaceships[id]!==undefined){
 							spaceships[id].stateSystem().changeState('fly');	//这里还要再写个id进去
 						}
 						break;
 						case 'stop':
-						if(spaceships[id]!==null){
+						if(spaceships[id]!==undefined){
 							spaceships[id].stateSystem().changeState('stop');
 						}
 						break;
 						case 'destroy':
-						if(spaceships[id]!==null){
-							spaceships.splice(id,1,null);
+						if(spaceships[id]!==undefined){
+							spaceships.splice(id,1,undefined);
 							Log.show('Spaceship No.'+id+' destroyed.')
 						}
 						break;
@@ -293,7 +293,7 @@
 			return false;
 			}
 		});
-		$('.yesorno').on('click',function(){
+		$('.yesorno').on('click',function(){	//这是选择面板出来后的操作，不要放在$('btn')里，会导致事件重复注册 
 			switch($(this).attr('id')){
 			case 'sure':
 			buttonSelect['confirm']();
@@ -314,7 +314,7 @@
 	};
 
 	window.onload = function(){
-		commander = new Commander();	//commander是全局对象，有没有办法解决这个问题？
+		var commander = new Commander();
 		buttonHandler(commander);
 		animLoop();
 	}
